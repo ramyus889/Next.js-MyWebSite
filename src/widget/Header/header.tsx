@@ -11,9 +11,9 @@ const items = [
 
 export const Header = () => {
   return (
-    <div className="flex justify-center">
-      <div className="fixed top-0 pt-3">
-        <div className="border-2 rounded-full w-90 h-13 flex justify-between px-3 items-center gap-5">
+    <div className="flex justify-center ">
+      <div className="fixed top-0 pt-3 max-w-100 w-full px-2">
+        <div className="border-2 rounded-full h-13 flex justify-between bg-black px-2 items-center gap-5">
           <Link href="/">
             <img
               src="/frontend.jpg"
@@ -24,7 +24,11 @@ export const Header = () => {
 
           {items.map((item) => (
             <Link key={item.label} href={item.href}>
-              <DecryptedText text={item.label} speed={70} />
+              <DecryptedText
+                text={item.label}
+                speed={70}
+                className="font-bold"
+              />
             </Link>
           ))}
           <Link
