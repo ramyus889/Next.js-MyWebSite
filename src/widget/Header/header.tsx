@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <div className="flex justify-center ">
       <div className="fixed top-0 pt-3 max-w-100 w-full px-2">
-        <div className="border-2 rounded-full h-13 flex justify-between px-2 items-center gap-5">
+        <div className="border-2 rounded-full h-13 flex justify-between bg-black px-2 items-center gap-5">
           <Link href="/">
             <img
               src="/frontend.jpg"
