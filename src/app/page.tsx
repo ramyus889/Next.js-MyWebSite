@@ -146,7 +146,7 @@ export default function Home() {
   return (
     <div className="">
       <div className="flex justify-center mx-[clamp(0.5rem,7vw,10rem)]">
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-6">
+        <div className="grid grid-cols-1 min-[1240px]:grid-cols-2 min-[1740px]:grid-cols-3 w-full gap-6">
           {items.map((item) => (
             <Card
               key={item.id}
