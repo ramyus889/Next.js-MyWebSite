@@ -1,3 +1,4 @@
+import { SiTailwindcss } from "react-icons/si";
 import { SiTypescript } from "react-icons/si";
 import { DiReact } from "react-icons/di";
 import { TbBrandNextjs } from "react-icons/tb";
@@ -56,6 +57,12 @@ const items = [
         language: "TypeScript",
         link: "https://www.typescriptlang.org/",
         icon: <SiTypescript color="#007ACC" size={20} />,
+      },
+      {
+        id: 4,
+        language: "TailwindCSS",
+        link: "https://tailwindcss.com/",
+        icon: <SiTailwindcss color="#38B2AC" size={30} />,
       },
     ],
   },
