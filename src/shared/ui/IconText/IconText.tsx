@@ -11,7 +11,7 @@ export function IconText({ text, icon, href }: IconTextProps) {
   return (
     <Link href={href} target="_blank" className="flex items-center gap-2">
       <div className="">{icon}</div>
-      <div className="text-xl text-black font-bold pt-1">{text}</div>
+      <div className="text-xl  font-bold pt-1">{text}</div>
     </Link>
   );
 }

@@ -1,6 +1,8 @@
+import { RotatingText } from "@/shared/ui";
 import Link from "next/link";
 import React, { JSX } from "react";
 import { BsGithub } from "react-icons/bs";
+import { TextDate } from "./types/itemDate";
 
 interface Language {
   id: number;
@@ -46,12 +48,6 @@ export const Card = ({
                   <Link href={gitLink} target="_blank">
                     <BsGithub size={38} />
                   </Link>
-
-                  <img
-                    src="/frontend.jpg"
-                    alt=""
-                    className="w-10 h-10 border-2 rounded-full border-gray-300"
-                  />
                 </div>
               </div>
             </div>
@@ -59,27 +55,21 @@ export const Card = ({
               <Link href={gitLink} target="_blank">
                 <BsGithub size={38} />
               </Link>
-
-              <img
-                src="/frontend.jpg"
-                alt=""
-                className="w-10 h-10 border-2 rounded-full border-gray-300"
-              />
             </div>
           </div>
-
-          <div className="flex flex-wrap sm:justify-end justify-center gap-2 mt-3">
-            {itemContent.map((item) => (
-              <Link
-                href={item.link}
-                key={item.id}
-                target="_blank"
-                className="border border-gray-300 rounded-full px-2 py-0.5 gap-1 text-[13px] flex items-center"
-              >
-                <div className="">{item.icon}</div>
-                <div className="pt-0.5">{item.language}</div>
-              </Link>
-            ))}
+          <div className="flex justify-end mt-5">
+            <RotatingText
+              texts={TextDate}
+              mainClassName="border-2 overflow-hidden  w-[180px] md:h-[50px] h-[40px] items-center justify-center rounded-2xl"
+              staggerFrom={"last"}
+              initial={{ y: "100%" }}
+              animate={{ y: 0 }}
+              exit={{ y: "-120%" }}
+              staggerDuration={0.025}
+              splitLevelClassName="overflow-hidden"
+              transition={{ type: "spring", damping: 30, stiffness: 300 }}
+              rotationInterval={2000}
+            />
           </div>
         </div>
       </div>
