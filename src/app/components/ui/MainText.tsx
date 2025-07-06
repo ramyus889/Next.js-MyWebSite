@@ -33,7 +33,7 @@ const texts = [
 
 export const MainText = () => {
   return (
-    <div className="flex sm:flex-row flex-col sm:items-center items-start gap-3 px-2">
+    <div className="flex sm:flex-row flex-col sm:items-center items-start gap-3 ">
       <div className="md:text-4xl text-2xl font-bold">Frontend Разработчик</div>
       <RotatingText
         texts={texts}
