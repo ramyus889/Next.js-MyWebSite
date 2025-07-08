@@ -1,7 +1,9 @@
 "use client";
 import { BsGithub } from "react-icons/bs";
-import { DecryptedText } from "@/shared/ui";
 import Link from "next/link";
+import { useRouter } from "next/router";
+import { cn } from "@/lib/utils";
+import { usePathname } from "next/navigation";
 
 const items = [
   { label: "Home", href: "/" },
@@ -10,6 +12,7 @@ const items = [
 ];
 
 export const Header = () => {
+  const router = usePathname();
   return (
     <div className="flex justify-center ">
       <div className="fixed top-0 pt-3 max-w-100 w-full px-2 z-1000">
@@ -23,12 +26,14 @@ export const Header = () => {
           </Link>
 
           {items.map((item) => (
-            <Link key={item.label} href={item.href}>
-              <DecryptedText
-                text={item.label}
-                speed={70}
-                className="font-bold"
-              />
+            <Link
+              key={item.label}
+              href={item.href}
+              className={cn(
+                router === item.href ? "text-white font-bold" : "text-gray-400"
+              )}
+            >
+              {item.label}
             </Link>
           ))}
           <Link
