@@ -14,7 +14,7 @@ export const TextDate = [
     key="next"
     text="Next.js"
     href="https://nextjs.org/"
-    icon={<TbBrandNextjs color="#000000" size={30} />}
+    icon={<TbBrandNextjs color="#ffffff" size={30} />}
   />,
   <IconText
     key="typescript"
