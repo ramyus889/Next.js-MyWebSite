@@ -7,7 +7,7 @@ export const MainText = () => {
       <div className="md:text-4xl text-2xl font-bold">Frontend Разработчик</div>
       <RotatingText
         texts={TextDate}
-        mainClassName="overflow-hidden text-white w-[165px] md:h-[50px] h-[40px] items-center justify-center rounded-lg"
+        mainClassName="overflow-hidden text-white w-[175px] md:h-[50px] h-[40px] items-center justify-start rounded-lg"
         staggerFrom={"last"}
         initial={{ y: "100%" }}
         animate={{ y: 0 }}
