@@ -22,8 +22,3 @@ export default function Home() {
   );
 }
 
-{
-  /*
-   ! скопировать вид у MywebSite-Vue
-  */
-}
