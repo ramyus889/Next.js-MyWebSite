@@ -14,6 +14,8 @@ export const Footer = () => {
             date={item.date}
             link={item.link}
             src={item.src}
+            heightDef={item.heightDef}
+            heightMob={item.heightMob}
             gitLink={item.gitLink}
             itemContent={item.languageContent}
           />
