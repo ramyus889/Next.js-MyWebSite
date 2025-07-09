@@ -1,20 +1,10 @@
 "use client";
 
 import React from "react";
-import { Main, Footer, Banner } from "./components";
+import { Main } from "./components";
 import { useLazyLoadPage } from "./hooks/useLazyLoadPage";
 
-const componentsList = [
-  Main,
-  Banner,
-  Footer,
-  Main,
-  Banner,
-  Footer,
-  Main,
-  Banner,
-  Footer,
-];
+const componentsList = [Main];
 
 export default function Home() {
   const count = useLazyLoadPage({
@@ -31,3 +21,4 @@ export default function Home() {
     </div>
   );
 }
+

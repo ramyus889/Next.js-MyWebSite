@@ -1,4 +1,4 @@
-export { SplitText } from "./SplitText/SplitText";
-export { FuzzyText } from "./FuzzyText/FuzzyText";
-export { RotatingText } from "./RotatingText/RotatingText";
-export { IconText } from "./IconText/IconText";
+export { SplitText } from "./ReactBitsUI/SplitText/SplitText";
+export { FuzzyText } from "./ReactBitsUI/FuzzyText/FuzzyText";
+export { RotatingText } from "./ReactBitsUI/RotatingText/RotatingText";
+export { IconText } from "./ReactBitsUI/IconText/IconText";
