@@ -22,6 +22,8 @@ interface CardProps {
   link: string;
   title: string;
   gitLink: string;
+  heightDef: string;
+  heightMob: string;
   itemContent: Language[];
 }
 
@@ -31,13 +33,15 @@ export const Card = ({
   date,
   title,
   gitLink,
+  heightDef,
+  heightMob,
   itemContent,
 }: CardProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const resizeStatus = useResizeWindow();
 
-  const height = isOpen ? (resizeStatus.sm ? "380px" : "340px") : "220px";
+  const height = isOpen ? (resizeStatus.sm ? heightMob : heightDef) : "220px";
 
   return (
     <div className="w-full">

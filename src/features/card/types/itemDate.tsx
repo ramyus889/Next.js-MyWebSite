@@ -9,6 +9,7 @@ import {
   SiFramer,
   SiVercel,
   SiGitlab,
+  SiPrisma,
 } from "react-icons/si";
 
 export const ItemDate = [
@@ -17,6 +18,8 @@ export const ItemDate = [
     src: "/31SaaS.png",
     link: "https://31-saa-s.vercel.app/",
     title: "31SaaS",
+    heightDef: "340px",
+    heightMob: "380px",
     date: "2024-03-14 - 2024-08-15",
     gitLink: "https://github.com/ramyus889/31SaaS",
     languageContent: [
@@ -62,6 +65,8 @@ export const ItemDate = [
     src: "/LessonEng.png",
     link: "https://lesson-english2-two.vercel.app/",
     title: "Lesson English",
+    heightDef: "340px",
+    heightMob: "380px",
     date: "2024-04-04 - 2024-07-10",
     gitLink: "https://github.com/ramyus889/LessonEnglish2",
     languageContent: [
@@ -107,6 +112,8 @@ export const ItemDate = [
     src: "/mirrorWorld.png",
     link: "https://mirror-world-seven.vercel.app/",
     title: "Mirror World",
+    heightDef: "340px",
+    heightMob: "380px",
     date: "2024-05-23 - 2024-08-15",
     gitLink: "https://github.com/ramyus889/MirrorWorld",
     languageContent: [
@@ -152,6 +159,8 @@ export const ItemDate = [
     src: "/portfolio.png",
     link: "https://personalwebfrontend.vercel.app/",
     title: "Portfolio",
+    heightDef: "340px",
+    heightMob: "380px",
     date: "2024-06-19 - 2024-07-10",
     gitLink: "https://github.com/ramyus889/portfolio",
     languageContent: [
@@ -197,6 +206,8 @@ export const ItemDate = [
     src: "/next-pizza.png",
     link: "https://next-js-pizza-sigma.vercel.app/",
     title: "Next Pizza",
+    heightDef: "340px",
+    heightMob: "380px",
     date: "2024-07-25 - 2024-08-01",
     gitLink: "https://github.com/ramyus889/Next.js-Pizza",
     languageContent: [
@@ -224,16 +235,23 @@ export const ItemDate = [
       {
         id: 4,
         language: "TypeScript",
-        colSpan: "min-[480px]:col-span-2",
+        colSpan: "",
         link: "https://www.typescriptlang.org/",
         icon: <SiTypescript color="#007ACC" size={18} />,
       },
       {
         id: 5,
         language: "JavaScript",
-        colSpan: "max-[480px]:col-span-2",
+        colSpan: "",
         link: "https://www.javascript.com/",
         icon: <FaJs color="#F7DF1E" size={18} />,
+      },
+      {
+        id: 6,
+        language: "Prisma",
+        colSpan: "",
+        link: "https://www.prisma.io/",
+        icon: <SiPrisma color="#007ACC" size={18} />,
       },
     ],
   },
