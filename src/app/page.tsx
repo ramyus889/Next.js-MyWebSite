@@ -31,11 +31,3 @@ export default function Home() {
     </div>
   );
 }
-
-{
-  /*
-   ! нужно добавить в IconText, Card - данные - Scss, GitHub, GitLab, Vercel, Motion, JS
-   ? перенести 75% ширины header направо position: absolute;
-   ! скопировать вид у MywebSite-Vue
-  */
-}
