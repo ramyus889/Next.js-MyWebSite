@@ -1,9 +1,9 @@
 "use client";
-import { BsGithub } from "react-icons/bs";
+
 import Link from "next/link";
-import { useRouter } from "next/router";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const items = [
   { label: "Home", href: "/" },
@@ -12,18 +12,27 @@ const items = [
 ];
 
 export const Header = () => {
+  const [isClick, setIsClick] = useState(false);
   const router = usePathname();
   return (
-    <div className="flex justify-center ">
-      <div className="fixed top-0 pt-3 max-w-100 w-full px-2 z-1000">
-        <div className="border-2 rounded-full h-13 flex justify-between bg-black px-2 items-center gap-5">
-          <Link href="/">
+    <div className="flex justify-end">
+      <div
+        className={cn(
+          "fixed top-0 -right-60 pt-5 max-w-80 w-full ps-2 z-1000 transition-all duration-300 ease-in-out",
+          isClick && "right-0"
+        )}
+      >
+        <div className="border-2 border-r-0 rounded-l-full h-13 flex justify-between bg-black ps-2 pe-6 items-center gap-3">
+          <button
+            onClick={() => setIsClick(!isClick)}
+            className="cursor-pointer"
+          >
             <img
               src="/frontend.jpg"
               alt=""
               className="w-10 h-10 rounded-full border-2 border-gray-300"
             />
-          </Link>
+          </button>
 
           {items.map((item) => (
             <Link
@@ -36,12 +45,6 @@ export const Header = () => {
               {item.label}
             </Link>
           ))}
-          <Link
-            href="https://github.com/ramyus889/Next.js-MyWebSite"
-            target="_blank"
-          >
-            <BsGithub size={38} />
-          </Link>
         </div>
       </div>
     </div>
