@@ -21,7 +21,7 @@ export const Header = () => {
         isClick && "-right-1"
       )}
     >
-      <div className="border-2 border-r-0 rounded-l-full h-13 flex justify-between bg-black ps-2 pe-6 items-center gap-3">
+      <div className="border-2 border-r-0 rounded-l-full h-13 flex justify-between bg-black ps-[6px] pe-6 items-center gap-3">
         <button onClick={() => setIsClick(!isClick)} className="">
           <img
             src="/frontend.jpg"
