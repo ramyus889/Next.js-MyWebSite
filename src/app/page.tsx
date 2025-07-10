@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useEffect } from "react";
 import { Main } from "./components";
 import { useLazyLoadPage } from "./hooks/useLazyLoadPage";
-import aos from "aos";
-import "aos/dist/aos.css";
+import { useAos } from "./hooks/useAos";
 
 const componentsList = [Main];
 
@@ -14,11 +12,8 @@ export default function Home() {
     step: 2,
     offset: 100,
   });
-  useEffect(() => {
-    aos.init({
-      duration: 800,
-    });
-  }, []);
+
+  useAos({ duration: 800 });
 
   return (
     <div>
