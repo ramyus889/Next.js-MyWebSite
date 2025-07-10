@@ -1,18 +1,9 @@
 "use client";
 import { FuzzyText } from "@/shared/ui";
-import { useEffect, useState } from "react";
+import { useResize } from "./hooks/useResize";
 
 export default function NotFound() {
-  const [isResized, setIsResized] = useState(false);
-
-  useEffect(() => {
-    const checkResize = () => setIsResized(window.innerWidth < 520);
-
-    checkResize();
-
-    window.addEventListener("resize", checkResize);
-    return () => window.removeEventListener("resize", checkResize);
-  }, []);
+  const isResized = useResize(520);
   return (
     <div className="flex flex-col items-center mt-[200px] gap-5 overflow-hidden">
       <>
