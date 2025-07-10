@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { JSX, useState } from "react";
 import { BsGithub } from "react-icons/bs";
-import { m, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useResizeWindow } from "./types/useResizeWindow";
 
 interface Language {
