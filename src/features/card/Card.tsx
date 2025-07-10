@@ -1,12 +1,10 @@
 "use client";
 
 import Link from "next/link";
-import React, { JSX, useEffect, useState } from "react";
+import { JSX, useState } from "react";
 import { BsGithub } from "react-icons/bs";
-import { TextDate } from "./types/itemDate";
 import { motion } from "framer-motion";
 import { useResizeWindow } from "./types/useResizeWindow";
-import { cn } from "@/lib/utils";
 
 interface Language {
   id: number;
