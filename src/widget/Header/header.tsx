@@ -1,14 +1,18 @@
 "use client";
 
+import { IoMdContact } from "react-icons/io";
+import { DiTrello } from "react-icons/di";
+import { AiOutlineHome } from "react-icons/ai";
+
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 const items = [
-  { label: "Home", href: "/" },
-  { label: "About", href: "/pages/About" },
-  { label: "Contact", href: "/pages/Contact" },
+  { id: "1", icon: <AiOutlineHome size={30} />, href: "/" },
+  { id: "2", icon: <DiTrello size={30} />, href: "/pages/About" },
+  { id: "3", icon: <IoMdContact size={30} />, href: "/pages/Contact" },
 ];
 
 export const Header = () => {
@@ -32,13 +36,13 @@ export const Header = () => {
 
         {items.map((item) => (
           <Link
-            key={item.label}
+            key={item.id}
             href={item.href}
             className={cn(
               router === item.href ? "text-white font-bold" : "text-gray-400"
             )}
           >
-            {item.label}
+            {item.icon}
           </Link>
         ))}
       </div>
