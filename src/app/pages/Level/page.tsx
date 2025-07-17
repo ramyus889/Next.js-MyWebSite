@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { Main, Footer, Banner } from "../../components";
+import { Level } from "./ui/Level";
 import { useLazyLoadPage } from "../../hooks/useLazyLoadPage";
 
-const componentsList = [Main, Banner, Footer];
+const componentsList = [Level];
 
 export default function Home() {
   const count = useLazyLoadPage({
