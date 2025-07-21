@@ -15,21 +15,13 @@ interface Language {
 
 interface CardProps {
   src: string;
-  date: string;
   link: string;
   title: string;
   gitLink: string;
   itemContent: Language[];
 }
 
-export const Card = ({
-  src,
-  link,
-  date,
-  title,
-  gitLink,
-  itemContent,
-}: CardProps) => {
+export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);

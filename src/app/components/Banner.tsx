@@ -11,7 +11,6 @@ export const Banner = () => {
           <Card
             key={item.id}
             title={item.title}
-            date={item.date}
             link={item.link}
             src={item.src}
             gitLink={item.gitLink}
