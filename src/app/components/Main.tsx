@@ -6,7 +6,7 @@ export const Main = () => {
   return (
     <div>
       <MainText />
-      <div className="grid grid-cols-1 min-[950px]:grid-cols-2 min-[1750px]:grid-cols-3 gap-4 mt-10">
+      <div className="grid grid-cols-1 min-[950px]:grid-cols-2 min-[1750px]:grid-cols-3 gap-4 my-10">
         {ItemDate.map((item) => (
           <Card
             key={item.id}
@@ -14,8 +14,6 @@ export const Main = () => {
             date={item.date}
             link={item.link}
             src={item.src}
-            heightDef={item.heightDef}
-            heightMob={item.heightMob}
             gitLink={item.gitLink}
             itemContent={item.languageContent}
           />
