@@ -15,21 +15,13 @@ interface Language {
 
 interface CardProps {
   src: string;
-  date: string;
   link: string;
   title: string;
   gitLink: string;
   itemContent: Language[];
 }
 
-export const Card = ({
-  src,
-  link,
-  date,
-  title,
-  gitLink,
-  itemContent,
-}: CardProps) => {
+export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -80,10 +72,8 @@ export const Card = ({
         />
       </div>
       <div className="mt-5 p-2 flex flex-col gap-4 flex-grow">
-        <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="text-sm text-gray-500">{date}</p>
-        </div>
+        <h3 className="text-lg font-semibold">{title}</h3>
+
         <div
           ref={scrollRef}
           onMouseDown={onMouseDown}
