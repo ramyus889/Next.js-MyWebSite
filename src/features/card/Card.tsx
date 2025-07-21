@@ -80,10 +80,8 @@ export const Card = ({
         />
       </div>
       <div className="mt-5 p-2 flex flex-col gap-4 flex-grow">
-        <div className="flex justify-between items-center">
-          <h3 className="text-lg font-semibold">{title}</h3>
-          <p className="text-sm text-gray-500">{date}</p>
-        </div>
+        <h3 className="text-lg font-semibold">{title}</h3>
+
         <div
           ref={scrollRef}
           onMouseDown={onMouseDown}
