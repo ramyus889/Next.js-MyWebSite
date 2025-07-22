@@ -18,8 +18,9 @@ export const sliderData: SliderGroup[] = [
     list: [
       { id: 1, value: 84, label: "Next.js/React.js", delay: 0.1 },
       { id: 2, value: 15, label: "React-Query(TanStack-Query)", delay: 0.15 },
-      { id: 3, value: 33, label: "TypeScript", delay: 0.2 },
-      { id: 4, value: 41, label: "JavaScript", delay: 0.25 },
+      { id: 3, value: 45, label: "React-Native", delay: 0.2 },
+      { id: 4, value: 33, label: "TypeScript", delay: 0.25 },
+      { id: 5, value: 41, label: "JavaScript", delay: 0.3 },
     ],
   },
   {
