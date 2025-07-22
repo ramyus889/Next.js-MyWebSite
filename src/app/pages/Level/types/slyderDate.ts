@@ -37,6 +37,8 @@ export const sliderData: SliderGroup[] = [
     list: [
       { id: 1, value: 95, label: "TailwindCSS", delay: 0.1 },
       { id: 2, value: 86, label: "Scss", delay: 0.15 },
+      { id: 3, value: 98, label: "Css", delay: 0.2 },
+      { id: 4, value: 76, label: "Css-in-Js", delay: 0.25 },
     ],
   },
   {
