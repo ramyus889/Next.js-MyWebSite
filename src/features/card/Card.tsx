@@ -9,7 +9,6 @@ interface Language {
   id: number;
   link: string;
   language: string;
-  colSpan: string;
   icon: JSX.Element;
 }
 
@@ -17,11 +16,19 @@ interface CardProps {
   src: string;
   link: string;
   title: string;
+  text: string;
   gitLink: string;
   itemContent: Language[];
 }
 
-export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
+export const Card = ({
+  src,
+  link,
+  title,
+  text,
+  gitLink,
+  itemContent,
+}: CardProps) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -71,8 +78,11 @@ export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
           className="w-full h-full object-cover rounded-t-xl shadow-md shadow-gray-900"
         />
       </div>
-      <div className="mt-5 p-2 flex flex-col gap-4 flex-grow">
-        <h3 className="text-lg font-semibold">{title}</h3>
+      <div className="mt-5 p-2 flex flex-col flex-grow">
+        <div className="flex-grow">
+          <h3 className="text-lg font-semibold">{title}</h3>
+          <div className="text-sm pt-3 text-gray-300">{text}</div>
+        </div>
 
         <div
           ref={scrollRef}
@@ -81,13 +91,16 @@ export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
           onMouseLeave={onMouseLeave}
           onMouseMove={onMouseMove}
           className="flex gap-2 mt-5 overflow-x-auto scrollbar-thin scrollHidden scrollbar-thumb-gray-400 scrollbar-track-gray-200 cursor-grab"
-          style={{ userSelect: isDragging ? "none" : "auto" }}
+          style={{
+            userSelect: isDragging ? "none" : "auto",
+            minHeight: "30px",
+          }}
         >
           {itemContent.map((item) => (
             <Link
               key={item.id}
               href={item.link}
-              className="flex items-center border-2 border-gray-400 px-3 rounded-lg justify-center flex-shrink-0"
+              className="flex items-center border-2 border-gray-400 px-3 rounded-lg  justify-center flex-shrink-0"
               style={{ minWidth: "80px" }}
             >
               {item.icon}
@@ -95,7 +108,8 @@ export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
             </Link>
           ))}
         </div>
-        <div className="mt-auto flex gap-3 pt-4">
+
+        <div className="mt-8 flex gap-3">
           <Link
             href={link}
             target="_blank"
