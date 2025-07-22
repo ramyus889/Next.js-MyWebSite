@@ -1,6 +1,6 @@
 "use client";
 
-import { Main } from "./components";
+import { Main } from "./componets/Main";
 import { useLazyLoadPage } from "./hooks/useLazyLoadPage";
 import { useAos } from "./hooks/useAos";
 

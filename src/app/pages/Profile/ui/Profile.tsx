@@ -1,9 +1,9 @@
 import { RotatingText } from "@/shared/ui";
 import { TextDate } from "../types/TextDate";
 
-export const MainText = () => {
+export const Profile = () => {
   return (
-    <div className="flex sm:flex-row flex-col  items-start gap-3 ">
+    <div className="flex sm:flex-row flex-col items-start gap-3">
       <div className="md:text-4xl text-2xl font-bold">Frontend Разработчик</div>
       <RotatingText
         texts={TextDate}
