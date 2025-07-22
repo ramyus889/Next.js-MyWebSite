@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Header />
-        <div className="pt-30 px-2 xl:mx-[clamp(10px,10vw,1000px)] sm:mx-[clamp(10px,3vw,1000px)]">
+        <div className="pt-25 px-2 xl:mx-[clamp(10px,10vw,1000px)] sm:mx-[clamp(10px,3vw,1000px)]">
           {children}
         </div>
       </body>

@@ -15,11 +15,9 @@ export default function Home() {
 
   return (
     <div>
-      <div className="text-4xl text-red-500">About</div>
       {componentsList.slice(0, count).map((Component, index) => (
         <Component key={index} />
       ))}
     </div>
   );
 }
-

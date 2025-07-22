@@ -64,7 +64,7 @@ export const Card = ({ src, link, title, gitLink, itemContent }: CardProps) => {
 
   return (
     <div className="border-2 border-gray-400 rounded-xl p-1 flex flex-col h-full">
-      <div className="h-[200px]">
+      <div className="h-[300px]">
         <img
           src={src}
           alt={title}
