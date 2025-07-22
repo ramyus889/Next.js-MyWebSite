@@ -10,6 +10,7 @@ export const Main = () => {
           title={item.title}
           link={item.link}
           src={item.src}
+          text={item.text}
           gitLink={item.gitLink}
           itemContent={item.languageContent}
         />
