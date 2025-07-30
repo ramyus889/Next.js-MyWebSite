@@ -1,4 +1,4 @@
-import { Card } from "../../features/card/Card";
+import { Card } from "@/features/card/Card";
 import { ItemDate } from "@/features/card/types/itemDate";
 
 export const Main = () => {
