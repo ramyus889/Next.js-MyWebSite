@@ -1,20 +1,32 @@
 import { RotatingText } from "@/shared/ui";
 import { TextDate } from "../types/TextDate";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export const Profile = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 800,
+    });
+  }, []);
+
   return (
-    <div className="flex justify-center items-center">
+    <div
+      data-aos="fade-up"
+      className="flex justify-center items-center max-sm:pt-20"
+    >
       <div className="max-w-[1400px] w-full border-2 border-gray-300 rounded-xl p-4">
-        <div className="flex justify-between gap-3 ">
+        <div className="flex md:flex-row flex-col-reverse md:justify-between justify-center max-md:items-center gap-3 ">
           <div>
-            <div className="flex sm:flex-row flex-col items-start gap-3">
-              <div className="md:text-4xl text-2xl font-bold">
+            <div className="flex sm:flex-row flex-col lg:items-start items-center gap-3">
+              <div className="lg:text-4xl text-2xl font-bold">
                 Frontend Разработчик
               </div>
 
               <RotatingText
                 texts={TextDate}
-                mainClassName="overflow-hidden text-white w-[175px] md:h-[50px] h-[40px] items-center justify-start rounded-lg"
+                mainClassName="overflow-hidden text-white w-[175px] md:h-[50px] h-[40px] items-center sm:justify-start justify-center rounded-lg"
                 staggerFrom={"last"}
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
@@ -26,13 +38,15 @@ export const Profile = () => {
               />
             </div>
 
-            <div className="text-3xl font-bold">Рамазан Юсупов</div>
+            <div className="lg:text-3xl text-2xl font-bold max-md:text-center max-sm:pt-5">
+              Рамазан Юсупов
+            </div>
           </div>
 
           <img
             src="/frontend.jpg"
             alt="frontend"
-            className="w-50 h-50 rounded-xl border-2 border-gray-300"
+            className="w-[clamp(100px,20vw,200px)] h-[clamp(100px,20vw,200px)] rounded-xl border-2 border-gray-300"
           />
         </div>
       </div>

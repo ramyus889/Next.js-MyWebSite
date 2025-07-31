@@ -28,6 +28,8 @@ export const Level = () => {
             const isOpen = openGroupIds.has(group.id);
             return (
               <li
+                data-aos="fade-up"
+                data-aos-delay={200 * group.id}
                 key={group.id}
                 className="w-full text-left border-2 border-gray-400 rounded-xl"
               >
