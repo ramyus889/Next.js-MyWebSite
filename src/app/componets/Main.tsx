@@ -16,10 +16,10 @@ export const Main = () => {
       {ItemDate.map((item) => (
         <div data-aos="fade-up" data-aos-delay={200 * item.id} key={item.id}>
           <Card
-            title={item.title}
-            link={item.link}
             src={item.src}
             text={item.text}
+            link={item.link}
+            title={item.title}
             gitLink={item.gitLink}
             itemContent={item.languageContent}
           />
