@@ -26,7 +26,7 @@ const itemsLink = [
   {
     id: "1",
     icon: <img src="/hhLogo.png" className="w-[30px] h-[30px]" alt="" />,
-    href: "https://hh.ru/?hhtmFrom=resume",
+    href: "https://hh.ru/resume/97ffa530ff0f33a4460039ed1f526f7a4e5936",
     target: "_blank",
   },
   {
