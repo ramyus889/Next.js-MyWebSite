@@ -9,7 +9,7 @@ export const ItemDate = [
     src: "/31SaaS.png",
     link: "https://31-saa-s.vercel.app/",
     title: "31SaaS",
-    text: "printed fierce avoid nature question action car pig nor record after brick gun sudden take run between airplane sheep softly doubt choice sum effort pound dinner worry tongue",
+    text: "31SaaS — это готовый шаблон (boilerplate) на базе Next.js 14, который позволяет быстро создать современное, функциональное и красивое SaaS-приложение (Software as a Service). Это не просто минимальный прототип (MVP), а полноценный стартовый набор для реального продукта.",
     gitLink: "https://github.com/ramyus889/31SaaS",
     languageContent: [
       {
@@ -51,7 +51,7 @@ export const ItemDate = [
     src: "/LessonEng.png",
     link: "https://lesson-english2-two.vercel.app/",
     title: "Lesson English",
-    text: "constantly tide globe no trip act hard hold depth seven late herself torn peace teacher rocket bush doubt win magic recall through yes forty",
+    text: "Набор базовых английских предложений и слов с переводом. Темы: работа, еда, отель, ключи, поддержка, понимание, желания, видения и т.д. Каждое предложение или слово дублируется на русском для удобства изучения. Примеры включают как простые утверждения, так и конструкции с местоимениями и глаголами.",
     gitLink: "https://github.com/ramyus889/LessonEnglish2",
     languageContent: [
       {
@@ -93,7 +93,7 @@ export const ItemDate = [
     src: "/mirrorWorld.png",
     link: "https://mirror-world-seven.vercel.app/",
     title: "Mirror World",
-    text: "bill porch being concerned more sell on baby swung moment body herd load circus mighty smooth upward better shadow then became bound development took",
+    text: "Be Smart, Make More — умное решение для большего заработка. Frictionless development with NFT Marketplace, Fiat-to-NFT, Crypto On-Ramp, Auth and Wallet — беспрепятственная разработка с маркетплейсом NFT, конвертацией фиатных денег в NFT, крипто-онрампом, аутентификацией и кошельком.",
     gitLink: "https://github.com/ramyus889/MirrorWorld",
     languageContent: [
       {
@@ -135,7 +135,7 @@ export const ItemDate = [
     src: "/portfolio.png",
     link: "https://personalwebfrontend.vercel.app/",
     title: "Portfolio",
-    text: "throughout double health near upward continued leave find apartment part sink fourth handle flies traffic therefore army former dinner plan answer ruler safe blind",
+    text: "Брендинг и Стек Технологий Tech Arsenal — название проекта/компании. Используемые инструменты и платформы: Framer, Webflow, Figma, Shopify. Акцент на современные no-code/low-code платформы и дизайн-инструменты. Портфолио и Галерея Работ Галерея проектов с возможностью просмотра (View Works).",
     gitLink: "https://github.com/ramyus889/portfolio",
     languageContent: [
       {
@@ -177,7 +177,7 @@ export const ItemDate = [
     src: "/next-pizza.png",
     link: "https://next-js-pizza-sigma.vercel.app/",
     title: "Next Pizza",
-    text: "bill wear composition respect library declared music public plane notice therefore design buy worry sit express understanding pet effort whispered forty carbon dust no",
+    text: "Это классический пример меню для сайта пиццерии с возможностью выбора пиццы, завтраков, закусок, коктейлей и напитков с фильтрами по тесту, размеру, цене и ингредиентам. Очень похоже на интерфейс и структуру сайта Додо Пиццы, но с вашим брендом Next Pizza.",
     gitLink: "https://github.com/ramyus889/Next.js-Pizza",
     languageContent: [
       {
