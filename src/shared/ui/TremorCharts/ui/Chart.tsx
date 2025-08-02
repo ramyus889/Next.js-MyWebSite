@@ -27,13 +27,15 @@ const chartdata = [
 
 export const BarChartLayoutExample = () => {
   return (
-    <BarChart
-      className="h-72"
-      data={chartdata}
-      index="name"
-      categories={["Day"]}
-      yAxisWidth={90}
-      layout="vertical"
-    />
+    <div data-aos="fade-up" data-aos-delay="100" className="">
+      <BarChart
+        className="h-72"
+        data={chartdata}
+        index="name"
+        categories={["Day"]}
+        yAxisWidth={90}
+        layout="vertical"
+      />
+    </div>
   );
 };

@@ -15,7 +15,7 @@ export const Profile = () => {
   return (
     <div
       data-aos="fade-up"
-      className="flex justify-center items-center max-sm:pt-20"
+      className="flex justify-center items-center max-sm:py-20"
     >
       <div className="max-w-[1400px] w-full border-2 border-gray-300 rounded-xl p-4">
         <div className="flex md:flex-row flex-col-reverse md:justify-between justify-center items-center gap-3 ">
