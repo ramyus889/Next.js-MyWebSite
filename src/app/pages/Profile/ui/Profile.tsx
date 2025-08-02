@@ -3,6 +3,7 @@ import { TextDate } from "../types/TextDate";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { BarChartLayoutExample } from "@/shared/ui/TremorCharts/ui/Chart";
 
 export const Profile = () => {
   useEffect(() => {
@@ -17,7 +18,7 @@ export const Profile = () => {
       className="flex justify-center items-center max-sm:pt-20"
     >
       <div className="max-w-[1400px] w-full border-2 border-gray-300 rounded-xl p-4">
-        <div className="flex md:flex-row flex-col-reverse md:justify-between justify-center max-md:items-center gap-3 ">
+        <div className="flex md:flex-row flex-col-reverse md:justify-between justify-center items-center gap-3 ">
           <div>
             <div className="flex sm:flex-row flex-col lg:items-start items-center gap-3">
               <div className="lg:text-4xl text-2xl font-bold">
@@ -48,6 +49,9 @@ export const Profile = () => {
             alt="frontend"
             className="w-[clamp(100px,20vw,200px)] h-[clamp(100px,20vw,200px)] rounded-xl border-2 border-gray-300"
           />
+        </div>
+        <div className="mt-10">
+          <BarChartLayoutExample />
         </div>
       </div>
     </div>
