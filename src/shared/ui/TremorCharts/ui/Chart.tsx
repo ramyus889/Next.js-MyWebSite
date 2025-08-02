@@ -27,7 +27,7 @@ const chartdata = [
 
 export const BarChartLayoutExample = () => {
   return (
-    <div data-aos="fade-up" data-aos-delay="100">
+    <div>
       <BarChart
         className="h-72"
         data={chartdata}
