@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { JSX, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
 
@@ -9,7 +9,7 @@ interface Language {
   id: number;
   link: string;
   language: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
 }
 
 interface CardProps {
@@ -42,8 +42,7 @@ export const Card = ({
     }
   };
 
-  const onMouseUp = () => setIsDragging(false);
-  const onMouseLeave = () => setIsDragging(false);
+  const stopDragging = () => setIsDragging(false);
 
   const onMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !scrollRef.current) return;
@@ -75,6 +74,7 @@ export const Card = ({
         <img
           src={src}
           alt={title}
+          loading="lazy"
           className="w-full h-full object-cover rounded-t-xl shadow-md shadow-gray-900"
         />
       </div>
@@ -87,10 +87,13 @@ export const Card = ({
         <div
           ref={scrollRef}
           onMouseDown={onMouseDown}
-          onMouseUp={onMouseUp}
-          onMouseLeave={onMouseLeave}
+          onMouseUp={stopDragging}
+          onMouseLeave={stopDragging}
+          onMouseOut={stopDragging}
           onMouseMove={onMouseMove}
-          className="flex gap-2 mt-5 overflow-x-auto scrollbar-thin scrollHidden scrollbar-thumb-gray-400 scrollbar-track-gray-200 cursor-grab"
+          className={`flex gap-2 mt-5 overflow-x-auto scrollbar-thin scrollHidden scrollbar-thumb-gray-400 scrollbar-track-gray-200 cursor-${
+            isDragging ? "grabbing" : "grab"
+          }`}
           style={{
             userSelect: isDragging ? "none" : "auto",
             minHeight: "30px",
@@ -100,8 +103,10 @@ export const Card = ({
             <Link
               key={item.id}
               href={item.link}
-              className="flex items-center border-2 border-gray-400 px-3 rounded-lg  justify-center flex-shrink-0"
+              className="flex items-center border-2 border-gray-400 px-3 rounded-lg justify-center flex-shrink-0"
               style={{ minWidth: "80px" }}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {item.icon}
               <span className="ml-1 text-[13px]">{item.language}</span>
@@ -113,18 +118,20 @@ export const Card = ({
           <Link
             href={link}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center border-2 border-gray-400 w-full py-1 rounded-lg justify-center"
           >
             <FiExternalLink className="mr-1" />
-            <span className="text-sm">{"Демо"}</span>
+            <span className="text-sm">Демо</span>
           </Link>
           <Link
             href={gitLink}
             target="_blank"
+            rel="noopener noreferrer"
             className="flex items-center border-2 border-gray-400 w-full py-1 rounded-lg justify-center"
           >
             <BsGithub className="mr-1" />
-            <span className="text-sm">{"Код"}</span>
+            <span className="text-sm">Код</span>
           </Link>
         </div>
       </div>

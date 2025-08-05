@@ -7,25 +7,23 @@ import { BarChartLayoutExample } from "@/shared/ui/TremorCharts/ui/Chart";
 
 export const Profile = () => {
   useEffect(() => {
-    Aos.init({
-      duration: 800,
-    });
+    Aos.init({ duration: 800 });
   }, []);
 
   return (
     <div data-aos="fade-up" className="flex justify-center max-sm:py-10">
       <div className="max-w-[1400px] w-full border-2 border-gray-300 rounded-xl p-4">
-        <div className="flex md:flex-row flex-col-reverse md:justify-between justify-center items-center gap-3 ">
+        <div className="flex flex-col-reverse md:flex-row md:justify-between justify-center items-center gap-3">
           <div>
-            <div className="flex sm:flex-row flex-col lg:items-start items-center gap-3">
-              <div className="lg:text-4xl text-2xl font-bold">
+            <div className="flex flex-col sm:flex-row lg:items-start items-center gap-3">
+              <h1 className="lg:text-4xl text-2xl font-bold">
                 Frontend Разработчик
-              </div>
+              </h1>
 
               <RotatingText
                 texts={TextDate}
-                mainClassName="overflow-hidden text-white w-[175px] md:h-[50px] h-[40px] items-center sm:justify-start justify-center rounded-lg"
-                staggerFrom={"last"}
+                mainClassName="overflow-hidden text-white w-[175px] md:h-[50px] h-[40px] flex items-center sm:justify-start justify-center rounded-lg"
+                staggerFrom="last"
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 exit={{ y: "-120%" }}
@@ -36,17 +34,19 @@ export const Profile = () => {
               />
             </div>
 
-            <div className="lg:text-3xl text-2xl font-bold max-md:text-center max-sm:pt-5">
+            <h2 className="lg:text-3xl text-2xl font-bold max-md:text-center max-sm:pt-5">
               Рамазан Юсупов
-            </div>
+            </h2>
           </div>
 
           <img
             src="/frontend.jpg"
-            alt="frontend"
+            alt="Фото Рамазана Юсупова"
+            loading="lazy"
             className="w-[clamp(100px,20vw,200px)] h-[clamp(100px,20vw,200px)] rounded-xl border-2 border-gray-300"
           />
         </div>
+
         <div className="mt-10">
           <BarChartLayoutExample />
         </div>
